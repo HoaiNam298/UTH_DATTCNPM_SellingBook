@@ -1,6 +1,6 @@
-﻿create database DATN_2023_SQL
+﻿create database SQL_DATTCNPM
 go
-use DATN_2023_SQL
+use SQL_DATTCNPM
 go
 
 create table VaiTro(
@@ -124,9 +124,6 @@ FOREIGN KEY (ID_SP)
 REFERENCES  SanPham(ID_SP);
 
 insert into TaiKhoan values
-	('nhattan@gmail.com','$2a$10$2n/7KPuN4OJtOuE0IKxu2eaJPmRgi8icWNgIJvzK2Ahop7ZbxJSqK',N'Đoàn Nhât Tân','tan.png',N'333 Lê Văn Sĩ'),
-	('anhkhoa@gmail.com','$2a$10$2n/7KPuN4OJtOuE0IKxu2eaJPmRgi8icWNgIJvzK2Ahop7ZbxJSqK',N'Bùi Anh Khoa','khoa.png',N'1072 Lê Đức Thọ'),
-	('toanthang@gmail.com','$2a$10$2n/7KPuN4OJtOuE0IKxu2eaJPmRgi8icWNgIJvzK2Ahop7ZbxJSqK',N'Trương Toàn Thắng','thang.png',N'134 Nguyễn Văn Quá'),
 	('nguyenhoainam29.08.01@gmail.com','$2a$10$2n/7KPuN4OJtOuE0IKxu2eaJPmRgi8icWNgIJvzK2Ahop7ZbxJSqK',N'Nguyễn Anh Hào','khoa.png',N'1072 Lê Đức Thọ'),
 	('hoainam@gmail.com','$2a$10$2n/7KPuN4OJtOuE0IKxu2eaJPmRgi8icWNgIJvzK2Ahop7ZbxJSqK',N'Nguyễn Hoài Nam','nam.png',N'1072 Lê Đức Thọ')
 
@@ -143,23 +140,13 @@ insert into VaiTro values
 select * from VaiTro
 
 Insert into PhanQuyen values
-	('nhattan@gmail.com',3),
 	('nguyenhoainam29.08.01@gmail.com',1),
-	('anhkhoa@gmail.com',3),
 	('hoainam@gmail.com',2)
 	select * from phanquyen
 
-Insert into PhanQuyen values
-	('nguyenhoainam@gmail.com',1)
-select * from PhanQuyen
-
-
 Insert into HoaDon values 
-	(CAST('2023-1-1' AS Date),N'123 Lê Đức Thọ','nhattan@gmail.com'),
-	(CAST('2023-2-1' AS Date),N'123 Nguyễn Văn Quá','anhkhoa@gmail.com'),
-	(CAST('2023-3-1' AS Date),N'188 Dương Thị Mười','nguyenhoainam29.08.01@gmail.com'),
-	(CAST('2023-4-1' AS Date),N'2 Thống Nhất','hoainam@gmail.com'),
-	(CAST('2023-5-1' AS Date),N'3 Đình Quá','toanthang@gmail.com')
+	(CAST('2025-9-9' AS Date),N'188 Dương Thị Mười','nguyenhoainam29.08.01@gmail.com'),
+	(CAST('2023-9-9' AS Date),N'2 Thống Nhất','hoainam@gmail.com')
 select * from HoaDon
 
 
@@ -193,27 +180,27 @@ select * from SanPham
 insert into HoaDonChiTiet values
 	(1,1,268000,2),
 	(2,2,530000,6),
-	(3,3,262000,6),
-	(4,4,442000,7),
-	(5,6,506000,4)
+	(1,3,262000,6),
+	(2,4,442000,7),
+	(1,6,506000,4)
 
 select * from HoaDonChiTiet
 
 insert into BinhLuan values 
 	('hoainam@gmail.com',1,N'Sách Hay Vãi Ò',3),
 	('nguyenhoainam29.08.01@gmail.com',2,N'Tuyệt',5),
-	('anhkhoa@gmail.com',3,N'Đọc cũng được',4),
-	('hoainam@gmail.com',4,N'Bình Thường',3),
-	('toanthang@gmail.com',5,N'Tệ',2),
+	('nguyenhoainam29.08.01@gmail.com',3,N'Đọc cũng được',4),
+	('nguyenhoainam29.08.01@gmail.com',4,N'Bình Thường',3),
+	('nguyenhoainam29.08.01@gmail.com',5,N'Tệ',2),
 	('nguyenhoainam29.08.01@gmail.com',6,N'Um',4),
 	('nguyenhoainam29.08.01@gmail.com',7,N'Um',5),
 	('nguyenhoainam29.08.01@gmail.com',8,N'Um',5)
 select * from BinhLuan
 
 insert into MaGiamGia values
-	('nhattan@gmail.com',1,0.1),
-	('anhkhoa@gmail.com',2,0.1),
-	('hoainam@gmail.com',3,0.1)
+	('nguyenhoainam29.08.01@gmail.com',1,0.1),
+	('nguyenhoainam29.08.01@gmail.com',2,0.1),
+	('nguyenhoainam29.08.01@gmail.com',3,0.1)
 select * from MaGiamGia
 
 insert into MaGiamGia values
