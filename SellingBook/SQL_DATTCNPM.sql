@@ -23,6 +23,8 @@ create table TaiKhoan(
 ALTER TABLE TaiKhoan
 ALTER COLUMN MatKhau varchar(200) not null;
 
+ALTER TABLE TaiKhoan
+ADD Token varchar(200);
 
 create table HoaDon(
 	ID_HD int PRIMARY KEY IDENTITY(1,1),
